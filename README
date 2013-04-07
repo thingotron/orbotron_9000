@@ -1,0 +1,36 @@
+This is the software repository for the Orbotron 9000, a small interface
+board designed to stand between old RS232 serial devices and the USB-HID
+interface modern computers expect.
+
+It is organized around the Atmel 32u4 and harnesses the Arduino development
+environment (at the present writing it is compatible with 
+Arduino version 1.0.3).  The repository is organized into several 
+subdirectories:
+
+libraries/      Arduino libraries and examples
+hardware/ 	Modifications to the Arduino build environment
+kicad/          KiCad files for the schematics and boards
+
+To use this software:
+
+Many (if not most) people will only need the drivers.  Simply have these in
+a directory and point Windows to it by selecting "Update Drivers" from 
+Device Manager.
+
+In both Windows 7 and Windows 8, you will have to go through a few extra steps
+as driver verification is turned on and these drivers (essentially the same
+as those for the Arduino save some ID changes) are not signed.  A web search
+for "unsigned drivers windows 8" or similar should turn up useful methods.
+
+If you wish to extend the functionality of the Orbotron 9000, you will want to
+upload custom sketches to the board.  This will require a bit more effort.
+
+1. Install the Arduino 1.0.3 environment
+2. Copy the "hardware/orbotron" directory into your arduino/hardware/
+   directory (so it should be arduino/hardware/orbotron).
+3. Copy the "libraries/orbotron" directory into your arduino libraries 
+   directory (usually "c:\users\yourname\arduino\libraries"
+
+You should then be able to start up the Arduino environment and try uploading
+an example such as "BasicJoystick" from the Orbotron library.  Don't forget
+to change your board type to "Orbotron 9000"!

@@ -1,0 +1,762 @@
+EESchema Schematic File Version 2  date 15/02/2013 17:13:38
+LIBS:atmega32u4bb-from_eagle
+LIBS:xilinx
+LIBS:valves
+LIBS:ttl_ieee
+LIBS:transistors
+LIBS:texas
+LIBS:special
+LIBS:siliconi
+LIBS:regul
+LIBS:pspice
+LIBS:power
+LIBS:philips
+LIBS:opto
+LIBS:motorola
+LIBS:microcontrollers
+LIBS:microchip1
+LIBS:microchip
+LIBS:memory
+LIBS:linear
+LIBS:interface
+LIBS:intel
+LIBS:graphic
+LIBS:gennum
+LIBS:elec-unifil
+LIBS:dsp
+LIBS:display
+LIBS:digital-audio
+LIBS:device
+LIBS:cypress
+LIBS:contrib
+LIBS:conn
+LIBS:cmos_ieee
+LIBS:cmos4000
+LIBS:brooktre
+LIBS:audio
+LIBS:atmel
+LIBS:analog_switches
+LIBS:adc-dac
+LIBS:74xx
+LIBS:vergon6
+LIBS:max3232
+LIBS:orbotron9k-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title "Orbotron 9000"
+Date "15 feb 2013"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	2600 3950 2700 3950
+Wire Wire Line
+	9250 5900 9500 5900
+Wire Wire Line
+	9500 5900 9500 5800
+Wire Wire Line
+	9500 5800 9900 5800
+Wire Wire Line
+	9900 4900 9900 5200
+Wire Wire Line
+	9900 5700 9800 5700
+Wire Wire Line
+	9800 5400 9900 5400
+Wire Wire Line
+	9250 5100 9300 5100
+Wire Wire Line
+	9300 4900 9250 4900
+Wire Wire Line
+	8050 5200 8000 5200
+Wire Wire Line
+	8050 4800 8000 4800
+Wire Wire Line
+	7100 5750 7550 5750
+Wire Wire Line
+	7550 5750 7550 5600
+Wire Wire Line
+	7550 5600 8050 5600
+Wire Wire Line
+	7650 3850 7100 3850
+Wire Wire Line
+	2600 4050 3800 4050
+Connection ~ 2700 3950
+Connection ~ 3300 2650
+Wire Wire Line
+	3300 2550 3300 2650
+Wire Wire Line
+	3100 2500 3100 2650
+Connection ~ 2700 4550
+Wire Wire Line
+	4600 3550 4600 3950
+Wire Wire Line
+	6950 2250 6950 2350
+Wire Wire Line
+	5700 2800 5700 2550
+Wire Wire Line
+	2700 4700 2700 4350
+Wire Wire Line
+	6950 1550 6950 1450
+Wire Wire Line
+	5200 4550 4900 4550
+Wire Wire Line
+	4900 4550 4800 4350
+Wire Wire Line
+	4800 4350 4300 4350
+Connection ~ 5100 4550
+Wire Wire Line
+	3100 2650 3500 2650
+Connection ~ 3100 2650
+Connection ~ 3100 2650
+Wire Wire Line
+	5200 3350 4700 3350
+Connection ~ 4900 3350
+Wire Wire Line
+	2700 4350 2600 4350
+Connection ~ 5200 5750
+Connection ~ 5200 5850
+Connection ~ 5200 5950
+Connection ~ 5200 6050
+Wire Wire Line
+	5700 2550 5500 2550
+Wire Wire Line
+	4400 5350 4400 4950
+Connection ~ 4400 5150
+Wire Wire Line
+	3500 2950 2500 2950
+Connection ~ 3100 2950
+Connection ~ 2800 2950
+Connection ~ 3100 2950
+Wire Wire Line
+	5200 2350 4600 2350
+Wire Wire Line
+	7100 4850 7500 4850
+Wire Wire Line
+	5500 2450 6000 2450
+Wire Wire Line
+	7100 4950 7500 4950
+Wire Wire Line
+	4200 4050 5000 4050
+Wire Wire Line
+	5000 4050 5200 4250
+Wire Wire Line
+	3800 4150 5000 4150
+Wire Wire Line
+	5000 4150 5200 4350
+Wire Wire Line
+	4700 4950 5200 4950
+Connection ~ 4700 4950
+Wire Wire Line
+	5200 5250 4900 5350
+Wire Wire Line
+	4900 5350 4700 5350
+Connection ~ 4700 5350
+Wire Wire Line
+	7100 3950 7500 3950
+Wire Wire Line
+	5200 2550 4600 2550
+Wire Wire Line
+	5200 2450 4600 2450
+Wire Wire Line
+	7100 5050 7500 5050
+Wire Wire Line
+	5200 3650 5200 3750
+Wire Wire Line
+	5200 3750 4600 3750
+Wire Wire Line
+	5200 4050 5200 3950
+Wire Wire Line
+	5200 3950 4600 3950
+Wire Wire Line
+	2800 2650 2500 2650
+Connection ~ 5200 3750
+Connection ~ 4900 3750
+Connection ~ 5200 3950
+Connection ~ 4600 3750
+Connection ~ 2500 2650
+Wire Wire Line
+	5500 2350 5700 2350
+Wire Wire Line
+	4700 3350 4700 3150
+Wire Wire Line
+	5200 3850 5050 3850
+Wire Wire Line
+	5200 6250 5200 5550
+Wire Wire Line
+	4300 4650 4300 4850
+Wire Wire Line
+	4400 5150 4100 5150
+Wire Wire Line
+	4100 5150 4100 5250
+Wire Wire Line
+	3100 2950 3100 3050
+Wire Wire Line
+	5700 2350 5700 2050
+Wire Wire Line
+	5200 3150 4900 3150
+Wire Wire Line
+	2500 2650 2500 2500
+Wire Wire Line
+	2700 4550 2900 4550
+Wire Wire Line
+	2600 4150 3400 4150
+Wire Wire Line
+	4900 3350 4900 3750
+Wire Wire Line
+	8050 5900 7550 5900
+Wire Wire Line
+	7550 5900 7550 5850
+Wire Wire Line
+	7550 5850 7100 5850
+Wire Wire Line
+	7700 4800 7700 5000
+Wire Wire Line
+	7700 5000 8050 5000
+Wire Wire Line
+	7700 5200 7700 5400
+Wire Wire Line
+	7700 5400 8050 5400
+Wire Wire Line
+	9900 4250 9900 4300
+Wire Wire Line
+	10000 4900 9600 4900
+Connection ~ 9900 4900
+Wire Wire Line
+	9600 4900 9600 5100
+Wire Wire Line
+	9800 5700 9800 4750
+Wire Wire Line
+	9800 4750 9250 4750
+Wire Wire Line
+	9250 4750 9250 4900
+Connection ~ 9800 5400
+Wire Wire Line
+	9900 5600 9250 5600
+Wire Wire Line
+	2700 3950 2700 3350
+NoConn ~ 9250 5700
+NoConn ~ 9250 6000
+NoConn ~ 8050 6000
+NoConn ~ 8050 5700
+NoConn ~ 9900 6000
+NoConn ~ 9900 5900
+NoConn ~ 9900 5500
+NoConn ~ 9900 5300
+$Comp
+L DB9 J1
+U 1 1 51176C1A
+P 10350 5600
+F 0 "J1" H 10350 6150 70  0000 C CNN
+F 1 "DB9" H 10350 5050 70  0000 C CNN
+F 4 "Multicomp" H 10350 5600 60  0001 C CNN "Field4"
+F 5 "8LCM009P-301B-XX" H 10350 5600 60  0001 C CNN "Field5"
+	1    10350 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 51176BED
+P 10000 4900
+F 0 "#PWR01" H 10000 4900 30  0001 C CNN
+F 1 "GND" H 10000 4830 30  0001 C CNN
+	1    10000 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VCC #PWR02
+U 1 1 51176BE1
+P 9900 4250
+F 0 "#PWR02" H 9900 4350 30  0001 C CNN
+F 1 "VCC" H 9900 4350 30  0000 C CNN
+	1    9900 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_C-US C?
+U 1 1 51176BA3
+P 9400 5100
+AR Path="/4EE20DCC" Ref="C?"  Part="1" 
+AR Path="/51176B7B" Ref="C?"  Part="1" 
+AR Path="/51176B8B" Ref="C?"  Part="1" 
+AR Path="/51176B96" Ref="C?"  Part="1" 
+AR Path="/51176BA3" Ref="C11"  Part="1" 
+F 0 "C11" H 9440 5124 70  0000 L BNN
+F 1 "0.1uF" H 9439 4935 70  0000 L BNN
+F 2 "adafruit-C0805K" H 9400 5100 60  0001 C CNN
+	1    9400 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_C-US C?
+U 1 1 51176B96
+P 9400 4900
+AR Path="/4EE20DCC" Ref="C?"  Part="1" 
+AR Path="/51176B7B" Ref="C?"  Part="1" 
+AR Path="/51176B8B" Ref="C?"  Part="1" 
+AR Path="/51176B96" Ref="C10"  Part="1" 
+F 0 "C10" H 9440 4924 70  0000 L BNN
+F 1 "0.1uF" H 9439 4735 70  0000 L BNN
+F 2 "adafruit-C0805K" H 9400 4900 60  0001 C CNN
+	1    9400 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_C-US C?
+U 1 1 51176B8B
+P 7800 5200
+AR Path="/4EE20DCC" Ref="C?"  Part="1" 
+AR Path="/51176B7B" Ref="C?"  Part="1" 
+AR Path="/51176B8B" Ref="C9"  Part="1" 
+F 0 "C9" H 7840 5224 70  0000 L BNN
+F 1 "0.1uF" H 7839 5035 70  0000 L BNN
+F 2 "adafruit-C0805K" H 7800 5200 60  0001 C CNN
+F 4 "Yageo" H 7800 5200 60  0001 C CNN "Field4"
+F 5 "CC0805KRX7R9BB104" H 7800 5200 60  0001 C CNN "Field5"
+	1    7800 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_C-US C?
+U 1 1 51176B7B
+P 7800 4800
+AR Path="/4EE20DCC" Ref="C?"  Part="1" 
+AR Path="/51176B7B" Ref="C8"  Part="1" 
+F 0 "C8" H 7840 4824 70  0000 L BNN
+F 1 "0.1uF" H 7839 4635 70  0000 L BNN
+F 2 "adafruit-C0805K" H 7800 4800 60  0001 C CNN
+	1    7800 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MAX3232 IC2
+U 2 1 51176AD8
+P 9900 4600
+F 0 "IC2" H 9550 4950 50  0000 L BNN
+F 1 "MAX3232" H 9500 4850 50  0000 L BNN
+F 2 "maxim-DIL16" H 9900 4750 50  0001 C CNN
+	2    9900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX3232 IC2
+U 1 1 51176A8D
+P 8650 5400
+F 0 "IC2" H 8250 6125 50  0000 L BNN
+F 1 "MAX3232" H 8250 4600 50  0000 L BNN
+F 2 "maxim-DIL16" H 8650 5550 50  0001 C CNN
+F 4 "Texas Instruments" H 8650 5400 60  0001 C CNN "Field4"
+F 5 "Max3232CDW" H 8650 5400 60  0001 C CNN "Field5"
+	1    8650 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 5116DC02
+P 7650 3850
+F 0 "#PWR03" H 7650 3850 30  0001 C CNN
+F 1 "GND" H 7650 3780 30  0001 C CNN
+	1    7650 3850
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 7500 3950
+$Comp
+L MICROUSB U1
+U 1 1 5116C746
+P 2150 4100
+F 0 "U1" H 2050 4500 60  0000 C CNN
+F 1 "MICROUSB" H 2200 4400 60  0000 C CNN
+	1    2150 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L adafruit_FIDUCIAL U$3
+U 1 1 4EE20DC5
+P 3600 2050
+F 0 "U$3" H 3600 2050 60  0001 C CNN
+F 1 "~" H 3600 2050 60  0001 C CNN
+F 2 "adafruit-FIDUCIAL_1MM" H 3600 2050 60  0001 C CNN
+	1    3600 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 5116B3BF
+P 2900 4550
+F 0 "#FLG04" H 2900 4645 30  0001 C CNN
+F 1 "PWR_FLAG" H 2900 4730 30  0000 C CNN
+	1    2900 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 5116B12C
+P 3300 2550
+F 0 "#FLG05" H 3300 2645 30  0001 C CNN
+F 1 "PWR_FLAG" H 3300 2730 30  0000 C CNN
+	1    3300 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR06
+U 1 1 5116B10D
+P 2500 2500
+F 0 "#PWR06" H 2500 2600 30  0001 C CNN
+F 1 "VCC" H 2500 2600 30  0000 C CNN
+	1    2500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR07
+U 1 1 5116B094
+P 3100 2500
+F 0 "#PWR07" H 3100 2590 20  0001 C CNN
+F 1 "+5V" H 3100 2590 30  0000 C CNN
+	1    3100 2500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5200 4750
+NoConn ~ 2600 4250
+NoConn ~ 7100 6050
+NoConn ~ 7100 5950
+NoConn ~ 7100 5650
+NoConn ~ 7100 5550
+NoConn ~ 7100 5450
+NoConn ~ 7100 5350
+NoConn ~ 7100 5150
+NoConn ~ 7100 4750
+NoConn ~ 7100 4650
+NoConn ~ 7100 4550
+NoConn ~ 7100 4450
+NoConn ~ 7100 4250
+NoConn ~ 7100 4150
+NoConn ~ 7100 3650
+NoConn ~ 7100 3550
+NoConn ~ 7100 3450
+NoConn ~ 7100 3350
+NoConn ~ 7100 3250
+NoConn ~ 7100 3150
+$Comp
+L adaprog_ATMEGA32U4 IC1
+U 1 1 4EE20DB3
+P 6100 4850
+F 0 "IC1" H 5400 3350 70  0000 L BNN
+F 1 "ATMEGA32U4-AU" H 5901 6650 70  0000 L BNN
+F 2 "atmel-TQFP44" H 6100 4850 60  0001 C CNN
+F 4 "Atmel" H 6100 4850 60  0001 C CNN "Field4"
+F 5 "AtMega32u4-AU" H 6100 4850 60  0001 C CNN "Field5"
+	1    6100 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR08
+U 1 1 4EE23DA6
+P 5700 2050
+F 0 "#PWR08" H 5700 2150 30  0001 C CNN
+F 1 "VCC" H 5700 2150 30  0000 C CNN
+	1    5700 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR09
+U 1 1 4EE23D87
+P 4600 3550
+F 0 "#PWR09" H 4600 3650 30  0001 C CNN
+F 1 "VCC" H 4600 3650 30  0000 C CNN
+	1    4600 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 4EE20D15
+P 3100 3050
+F 0 "#PWR010" H 3100 3050 30  0001 C CNN
+F 1 "GND" H 3100 2980 30  0001 C CNN
+	1    3100 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 4EE20D00
+P 6950 2350
+F 0 "#PWR011" H 6950 2350 30  0001 C CNN
+F 1 "GND" H 6950 2280 30  0001 C CNN
+	1    6950 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 4EE20CCD
+P 4100 5250
+F 0 "#PWR012" H 4100 5250 30  0001 C CNN
+F 1 "GND" H 4100 5180 30  0001 C CNN
+	1    4100 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 4EE20C98
+P 5700 2800
+F 0 "#PWR013" H 5700 2800 30  0001 C CNN
+F 1 "GND" H 5700 2730 30  0001 C CNN
+	1    5700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR014
+U 1 1 4EE20C7E
+P 4300 4850
+F 0 "#PWR014" H 4300 4850 30  0001 C CNN
+F 1 "GND" H 4300 4780 30  0001 C CNN
+	1    4300 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 4EE20C5D
+P 5200 6250
+F 0 "#PWR015" H 5200 6250 30  0001 C CNN
+F 1 "GND" H 5200 6180 30  0001 C CNN
+	1    5200 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 4EE20C49
+P 2700 4700
+F 0 "#PWR016" H 2700 4700 30  0001 C CNN
+F 1 "GND" H 2700 4630 30  0001 C CNN
+	1    2700 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR017
+U 1 1 4EE20B8A
+P 5050 3850
+F 0 "#PWR017" H 5050 3940 20  0001 C CNN
+F 1 "+5V" H 5050 3940 30  0000 C CNN
+	1    5050 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR018
+U 1 1 4EE20B74
+P 6950 1450
+F 0 "#PWR018" H 6950 1540 20  0001 C CNN
+F 1 "+5V" H 6950 1540 30  0000 C CNN
+	1    6950 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR019
+U 1 1 4EE20B5B
+P 4700 3150
+F 0 "#PWR019" H 4700 3240 20  0001 C CNN
+F 1 "+5V" H 4700 3240 30  0000 C CNN
+	1    4700 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR020
+U 1 1 4EE20B0F
+P 2700 3350
+F 0 "#PWR020" H 2700 3440 20  0001 C CNN
+F 1 "+5V" H 2700 3440 30  0000 C CNN
+	1    2700 3350
+	1    0    0    -1  
+$EndComp
+Text Notes 7200 7150 0    100  ~ 0
+Atmega32u4 Breakout Board+
+Text Notes 10100 7150 0    100  ~ 0
+CC 2.5 BY-SA
+$Comp
+L C_C-US C1
+U 1 1 4EE20DCC
+P 4300 4450
+F 0 "C1" H 4340 4474 70  0000 L BNN
+F 1 "1uF" H 4339 4285 70  0000 L BNN
+F 2 "adafruit-C0805K" H 4300 4450 60  0001 C CNN
+F 4 "multicomp" H 4300 4450 60  0001 C CNN "Field4"
+F 5 "MCCA000543" H 4300 4450 60  0001 C CNN "Field5"
+	1    4300 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_C-US C2
+U 1 1 4EE20DC9
+P 4600 4950
+F 0 "C2" H 4640 4975 70  0000 L BNN
+F 1 "30pf" H 4640 4785 70  0000 L BNN
+F 2 "adafruit-C0805K" H 4600 4950 60  0001 C CNN
+	1    4600 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L C_C-US C3
+U 1 1 4EE20DCA
+P 4600 5350
+F 0 "C3" H 4640 5375 70  0000 L BNN
+F 1 "30pf" H 4640 5185 70  0000 L BNN
+F 2 "adafruit-C0805K" H 4600 5350 60  0001 C CNN
+F 4 "AVX" H 4600 5350 60  0001 C CNN "Field4"
+F 5 "08051A300JAT2A" H 4600 5350 60  0001 C CNN "Field5"
+	1    4600 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L C_C-US C4
+U 1 1 4EE208B5
+P 3100 2750
+F 0 "C4" H 3140 2774 70  0000 L BNN
+F 1 "0.1uF" H 3139 2585 70  0000 L BNN
+F 2 "adafruit-C0805K" H 3100 2750 60  0001 C CNN
+	1    3100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_CPOL-US C5
+U 1 1 4EE20DCB
+P 3500 2750
+F 0 "C5" H 3540 2774 70  0000 L BNN
+F 1 "10uF" H 3539 2585 70  0000 L BNN
+F 2 "adafruit-A/3216-18R" H 3500 2750 60  0001 C CNN
+F 4 "Vishay" H 3500 2750 60  0001 C CNN "Field4"
+F 5 "293D106X96R3A2TE3" H 3500 2750 60  0001 C CNN "Field5"
+	1    3500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_C-US C6
+U 1 1 4EE20DBC
+P 2800 2750
+F 0 "C6" H 2840 2774 70  0000 L BNN
+F 1 "0.1uF" H 2839 2585 70  0000 L BNN
+F 2 "adafruit-C0805K" H 2800 2750 60  0001 C CNN
+	1    2800 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_C-US C7
+U 1 1 4EE20DAF
+P 2500 2750
+F 0 "C7" H 2540 2774 70  0000 L BNN
+F 1 "0.1uF" H 2539 2585 70  0000 L BNN
+F 2 "adafruit-C0805K" H 2500 2750 60  0001 C CNN
+	1    2500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L adaprog_PINHD-2X3 ISP6
+U 1 1 4EE20DB4
+P 5300 2450
+F 0 "ISP6" H 5050 2675 70  0000 L BNN
+F 1 "PINHD-2X3THM" H 5050 2150 70  0000 L BNN
+F 2 "pin_array_3x2" H 5300 2450 60  0001 C CNN
+	1    5300 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_LED PWR1
+U 1 1 4EE20DBD
+P 6950 2050
+F 0 "PWR1" V 7090 1870 70  0000 L BNN
+F 1 "GREEN" V 7175 1870 70  0000 L BNN
+F 2 "adafruit-CHIPLED_0805" H 6950 2050 60  0001 C CNN
+F 4 "Osram" V 6950 2050 60  0001 C CNN "Field4"
+F 5 "LGQ971" V 6950 2050 60  0001 C CNN "Field5"
+	1    6950 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_R-US_ R1
+U 1 1 4EE20DBE
+P 4000 4050
+F 0 "R1" H 3850 4109 70  0000 L BNN
+F 1 "22" H 3850 3920 70  0000 L BNN
+F 2 "adafruit-R0805" H 4000 4050 60  0001 C CNN
+F 4 "Multicomp" H 4000 4050 60  0001 C CNN "Field4"
+F 5 "MC 0.1W 0805 5% 22R" H 4000 4050 60  0001 C CNN "Field5"
+	1    4000 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_R-US_ R2
+U 1 1 4EE20DBF
+P 3600 4150
+F 0 "R2" H 3450 4209 70  0000 L BNN
+F 1 "22" H 3450 4020 70  0000 L BNN
+F 2 "adafruit-R0805" H 3600 4150 60  0001 C CNN
+	1    3600 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_R-US_ R3
+U 1 1 4EE20DC0
+P 6950 1750
+F 0 "R3" H 6800 1809 70  0000 L BNN
+F 1 "1K" H 6800 1620 70  0000 L BNN
+F 2 "adafruit-R0805" H 6950 1750 60  0001 C CNN
+F 4 "Yageo" H 6950 1750 60  0001 C CNN "Field4"
+F 5 "RT0805FRE071KL" H 6950 1750 60  0001 C CNN "Field5"
+	1    6950 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L adafruit_FIDUCIAL U$2
+U 1 1 4EE20DC6
+P 3000 2050
+F 0 "U$2" H 3000 2050 60  0001 C CNN
+F 1 "~" H 3000 2050 60  0001 C CNN
+F 2 "adafruit-FIDUCIAL_1MM" H 3000 2050 60  0001 C CNN
+	1    3000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L adafruit_FIDUCIAL U$1
+U 1 1 4EE20DC7
+P 2400 2050
+F 0 "U$1" H 2400 2050 60  0001 C CNN
+F 1 "~" H 2400 2050 60  0001 C CNN
+F 2 "adafruit-FIDUCIAL_1MM" H 2400 2050 60  0001 C CNN
+	1    2400 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L X_XTAL X3
+U 1 1 4EE20DC8
+P 4700 5150
+F 0 "X3" H 4600 5300 50  0000 L BNN
+F 1 "16MHz" H 4550 4950 50  0000 L BNN
+F 2 "adafruit-NX5032" H 4700 5150 60  0001 C CNN
+F 4 "Abracon" H 4700 5150 60  0001 C CNN "Field4"
+F 5 "ABM3-16.000MHZ-B2-T" H 4700 5150 60  0001 C CNN "Field5"
+	1    4700 5150
+	0    -1   -1   0   
+$EndComp
+Text Label 7200 3850 0    70   ~ 0
+HWB
+Text Label 4900 2350 0    70   ~ 0
+MISO
+Text Label 7200 4850 0    70   ~ 0
+MISO
+Text Label 6000 2450 0    70   ~ 0
+MOSI
+Text Label 7200 4950 0    70   ~ 0
+MOSI
+Text Label 7200 3950 0    70   ~ 0
+PE6
+Text Label 4900 2550 0    70   ~ 0
+RST
+Text Label 4900 3150 0    70   ~ 0
+RST
+Text Label 4900 2450 0    70   ~ 0
+SCK
+Text Label 7200 5050 0    70   ~ 0
+SCK
+$EndSCHEMATC
