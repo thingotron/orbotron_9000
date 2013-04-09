@@ -199,7 +199,7 @@ const USB_Descriptor_String_t ProductString =
 	.UnicodeString			= L"Arduino Micro   "
 	#elif DEVICE_PID == 0x003C
 	.UnicodeString			= L"Arduino Esplora "
-	#elif DEVICE_PID == 0x605c
+	#elif DEVICE_PID == 0x6067
 	.UnicodeString                  = L"Orbotron 9000   "
 	#else
 	.UnicodeString			= L"USB IO board    "

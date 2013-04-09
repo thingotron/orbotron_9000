@@ -50,7 +50,8 @@
 # reuse of this VID by others is forbidden by USB-IF
 # official Arduino LLC VID
 # VID = 0x2341
-
+# Orbotron uses VID/PID pair from OpenMoko
+# VID = 0x1d50
 
 # USB product ID (PID)
 # official Leonardo PID
@@ -127,7 +128,7 @@ OBJDIR = .
 
 
 # Path to the LUFA library
-LUFA_PATH = ../../../../../../LUFA/LUFA-111009
+LUFA_PATH = ../../../../../LUFA-111009
 
 
 # LUFA library compile-time options and predefined tokens
