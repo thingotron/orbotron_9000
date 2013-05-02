@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 2 date 25/03/2013 17:23:08
+PCBNEW-BOARD Version 2 date 07/04/2013 15:43:20
 
 # Created by Pcbnew(2013-03-04 BZR 3984)-stable
 
@@ -10,7 +10,7 @@ EnabledLayers 1FFF8001
 Links 58
 NoConn 0
 Di 71.755 16.51 184.730574 89.090501
-Ndraw 14
+Ndraw 16
 Ntrack 185
 Nzone 0
 BoardThickness 1.6002
@@ -21,7 +21,7 @@ $EndGENERAL
 $SHEETDESCR
 Sheet A4 11693 8268
 Title ""
-Date "25 mar 2013"
+Date "7 apr 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -1993,6 +1993,16 @@ Of 0 0 0
 Ro 0 0 0
 $EndSHAPE3D
 $EndMODULE DB9MC
+$TEXTPCB
+Te "www.thingotron.com"
+Po 116.84 45.72 1 1.5 0.2048 0
+De 21 1 0 Normal
+$EndTEXTPCB
+$TEXTPCB
+Te "Orbotron 9000 PTH 1.0"
+Po 109.22 40.64 1 1.5 0.2048 0
+De 21 1 0 Normal
+$EndTEXTPCB
 $DRAWSEGMENT
 Po 2 77.47 41.91 73.66 41.91 0.381
 De 28 0 900 0 0

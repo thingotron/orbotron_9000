@@ -87,11 +87,11 @@ class Mouse_
 {
 private:
 	uint8_t _buttons;
-	void buttons(uint8_t b);
 public:
 	Mouse_(void);
 	void begin(void);
 	void end(void);
+	void buttons(uint8_t b);
 	void click(uint8_t b = MOUSE_LEFT);
 	void move(signed char x, signed char y, signed char wheel = 0);
 	void press(uint8_t b = MOUSE_LEFT);		// press LEFT by default
@@ -161,6 +161,7 @@ public:
 	virtual size_t write(uint8_t k);
 	virtual size_t press(uint8_t k);
 	virtual size_t release(uint8_t k);
+	virtual void send_keys( uint8_t modifiers, int count, uint8_t* p_keys );
 	virtual void releaseAll(void);
 };
 extern Keyboard_ Keyboard;

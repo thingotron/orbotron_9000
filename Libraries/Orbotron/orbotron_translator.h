@@ -37,6 +37,8 @@ struct Axis_mouse_binding
   unsigned short axis;
   unsigned short mouse_axis;
   short scale;
+  short absolute_motion_radius;
+  short absolute_motion_scale;
 };
 
 struct Button_mouse_binding
@@ -169,6 +171,7 @@ public:
   short precision_gain[NUM_LOGICAL_AXES];
   unsigned short precision_mask;
   unsigned long last_mouse_update_time;
+  unsigned short last_mouse_orb_values[2];
   unsigned short translated_axes[ NUM_LOGICAL_AXES ];
   bool send_joystick_reports;
   const unsigned char *axis_map;
@@ -198,6 +201,8 @@ public:
   {
     axis_map = Axis_map_spaceorb_face;
     polarity = Polarity_spaceorb_face;
+    last_mouse_orb_values[0] = 0;
+    last_mouse_orb_values[1] = 0;
 
     set_gain(0);
     set_precision_gain(0);
@@ -252,6 +257,12 @@ public:
 
   void set_axis_mouse_bindings( Axis_mouse_binding* p_new_binding, int num_bindings )
     {
+      //presently you can only have 2 bindings; technically more is possible but
+      //would mildly complicate the code for last_mouse_orb_values
+      if (num_bindings > 2) 
+	{
+	  num_bindings = 2;
+	}
       axis_mouse_bindings = p_new_binding;
       num_axis_mouse_bindings = num_bindings;
     }
@@ -332,6 +343,7 @@ public:
       return 1023-physical_val; //sensitivity_chart( 1023 - physical_val );
       break;
     }
+
   }
 
   unsigned short mapped_buttons( Logical_orbotron& orb ) 
@@ -455,7 +467,7 @@ public:
 		 }
 	     }
 	 }
-      to.send_keyboard_report( 6, keypresses );
+       to.send_keyboard_report( keypresses[0], 5, keypresses+1 );
     }
 
   void translate_joystick( unsigned short *buffer, 
@@ -468,20 +480,67 @@ public:
       }
   }
 
-  char scaled_mouse_axis( unsigned short orb_axis,
-			  short scale )
+  char scaled_mouse_relative_move( short orb_axis,
+				   short scale,
+				   short absolute_motion_radius )
     {
       short ax = 0;
+      short low = 512-absolute_motion_radius;
+      short high = 512+absolute_motion_radius;
+      // if the orb reading is in the absolute motion radius, return 0
+      if ( ( low < orb_axis ) 
+	   && ( orb_axis < high ) )
+	{
+	  return 0;
+	}
+      // clip axes to the motion outside the absolute radius
+      else if ( orb_axis <= low )
+	{
+	  orb_axis = orb_axis - low;
+	}
+      else if ( orb_axis >= high ) 
+	{
+	  orb_axis = orb_axis-high;
+	}
       if ( scale < 0 ) 
 	{
-	  ax = bounded_number((512 -(short)(orb_axis)) >> (-scale), -127, 127);
+	  ax = bounded_number(-orb_axis >> (-scale), -127, 127);
 	}
       else
 	{
-	  ax = bounded_number(((short)(orb_axis) - 512) >> (scale), -127, 127);
+	  ax = bounded_number(orb_axis >> (scale), -127, 127);
 	}
       return ax;
     }
+
+  char scaled_mouse_absolute_move( short orb_axis,
+				   short scale,
+				   short absolute_motion_radius,
+				   short last_orb_value )
+  {
+    // this isn't trivial--if we go suddenly into or out of the absolute motion area
+    // we don't want to have the part outside the area count
+    short ax = bounded_number(orb_axis, 
+			      512-absolute_motion_radius,
+			      512+absolute_motion_radius) 
+      - bounded_number( last_orb_value, 
+			512-absolute_motion_radius,
+			512+absolute_motion_radius );
+    // if we're outside the absolute motion area, don't have any absolute move
+    if ( (ax < -absolute_motion_radius) && (absolute_motion_radius < ax) )
+      {
+	ax = 0;
+      }
+    if ( scale < 0 )
+      {
+    	ax = bounded_number( -ax >> (-scale), -127, 127);
+      }
+    else
+      {
+    	ax = bounded_number( ax >> (scale), -127, 127);
+      }
+    return ax;
+  }
 
   void translate_mouse_bindings( unsigned short* buffer,
 				 Logical_orbotron& from,
@@ -494,7 +553,15 @@ public:
       for ( unsigned int i = 0; i < num_axis_mouse_bindings; ++i )
 	{
 	  unsigned short ax = buffer[ pgm_read_word(&axis_mouse_bindings[i].axis) ];
-	  char mouse_ax =  scaled_mouse_axis( ax, pgm_read_word( &axis_mouse_bindings[i].scale ) );
+	  char mouse_ax =  
+	    scaled_mouse_relative_move( ax, 
+					pgm_read_word( &axis_mouse_bindings[i].scale ),
+					pgm_read_word( &axis_mouse_bindings[i].absolute_motion_radius )) 
+	    + scaled_mouse_absolute_move( ax, 
+					  pgm_read_word( &axis_mouse_bindings[i].absolute_motion_scale ),
+					  pgm_read_word( &axis_mouse_bindings[i].absolute_motion_radius ),
+					  last_mouse_orb_values[i] );
+	  last_mouse_orb_values[i] = ax;
 	  switch (pgm_read_byte( &axis_mouse_bindings[i].mouse_axis ))
 	    {
 	    case MOUSE_AXIS_X :
@@ -547,11 +614,11 @@ orbotron_checkinit( Logical_orbotron& from, Orbotron_translator& translator, Orb
       if (from.orb_type == SpaceBall4000)
 	{
 	  //to.safe_send_serial_P(spaceball_setup_string);
-	  Serial.print("\rCB\rNT\rFT?\rFR?\rP@r@r\rMSSV\rZ\rBcCcCcC\r");
+	  Serial1.print("\rCB\rNT\rFT?\rFR?\rP@r@r\rMSSV\rZ\rBcCcCcC\r");
 	}
       else if ( from.orb_type == SpaceBall5000 )
 	{
-	  Serial.print("\rm3\rpBB\rz\r");
+	  Serial1.print("\rm3\rpBB\rz\r");
 	  //not sure why this isn't working any more, incidentally
 	  //to.safe_send_serial_P(magellan_setup_string);
 	}

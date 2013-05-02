@@ -25,7 +25,7 @@
 
 // *** This used to be RAWHID_ENABLED
 //#define RAWHID_ENABLED
-//#define KBAM_ENABLED
+#define KBAM_ENABLED
 #define JOYHID_ENABLED
 
 //	Singletons for mouse and keyboard
@@ -53,7 +53,7 @@ Joystick_ Joystick;
 extern const u8 _hidReportDescriptor[] PROGMEM;
 const u8 _hidReportDescriptor[] = {
 
-#if KBAM_ENABLED
+#ifdef KBAM_ENABLED
 	//	Mouse
 	0x05, 0x01,			// USAGE_PAGE (Generic Desktop)	// 54
 	0x09, 0x02,			// USAGE (Mouse)
@@ -400,6 +400,17 @@ void Keyboard_::sendReport(KeyReport* keys)
 {
 	HID_SendReport(2,keys,sizeof(KeyReport));
 }
+
+void Keyboard_::send_keys( uint8_t modifiers,  int count, uint8_t* p_keys )
+{
+  _keyReport.modifiers = modifiers;
+  if ( count > 6 ) {
+    count = 6;
+  }
+  memcpy( _keyReport.keys, p_keys, count );
+  sendReport(&_keyReport);
+}
+
 
 extern
 const uint8_t _asciimap[128] PROGMEM;

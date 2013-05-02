@@ -31,7 +31,6 @@ class Orbotron_device
 			     unsigned short rz, 
 			     unsigned short btn ) 
   {
-    Serial.println(rz);
     joy_state.xAxis = x;
     joy_state.yAxis = y;
     joy_state.zAxis = z;
@@ -42,14 +41,14 @@ class Orbotron_device
     Joystick.setState(&joy_state);
   }
 
-  void send_keyboard_report( int count, unsigned char * buttons )
+  void send_keyboard_report( unsigned char modifiers, int count, unsigned char * buttons )
   {
-    Serial.print("Key");
+    Keyboard.send_keys( modifiers, count, buttons );
   }
 
   void send_single_keyboard_report( unsigned char keyStroke, unsigned char modifiers )
   {
-    Serial.print("Key1");
+    //Serial.print("Key1");
   }
 
   void send_mouse_report( unsigned char buttons,
@@ -57,7 +56,8 @@ class Orbotron_device
 			  char y,
 			  char wheel )
   {
-    Serial.print("Mouse");
+    Mouse.buttons(buttons);
+    Mouse.move( x, y, wheel );
   }
 
 };
