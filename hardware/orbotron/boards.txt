@@ -21,3 +21,14 @@ orbotron.build.pid=0x6068
 orbotron.build.core=orbotron
 orbotron.build.variant=orbotron
 
+### these extra parameters are for Arduino 1.5:
+orbotron.build.extra_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid}
+orbotron.upload.tool=avrdude
+
+
+orbotron.bootloader.tool=avrdude
+
+orbotron.upload.maximum_data_size=2560
+orbotron.upload.use_1200bps_touch=true
+orbotron.upload.wait_for_upload_port=true
+
