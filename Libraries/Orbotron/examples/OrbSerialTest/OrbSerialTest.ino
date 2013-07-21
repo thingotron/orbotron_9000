@@ -7,6 +7,11 @@ void setup() {
   Serial.println("This sketch simply takes input from the OrbShield's serial port");
   Serial.println("and sends it out the serial port.  DIP switches should be set with");
   Serial.println("switch 1 (nearest to the serial port) ON, switch 2 OFF");
+  Serial.println("Delaying 4sec before sending init string...");
+  
+  delay(4000);
+  Serial1.print("\rm3\rpBB\rz\r");
+  
   Serial.println("Serial dump follows:\n");
 }
 
