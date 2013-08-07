@@ -320,9 +320,13 @@ public:
 	  set_chording( false );
 	  set_axis_map( Axis_map_spaceball_4k );
 	  set_polarity( Polarity_spaceball_5k );
-	  set_axis_gain( 0, 40 );
-	  set_axis_gain( 1, 40 );
-	  set_axis_gain( 2, 40 );
+	  set_axis_gain( 0, 20 );
+	  set_axis_gain( 1, 20 );
+	  set_axis_gain( 2, 20 );
+
+	  set_axis_gain( 3, 20 );
+	  set_axis_gain( 4, 20 );
+	  set_axis_gain( 5, 20 );
 	  send_joystick_reports = true;
 	  break;
 	}
@@ -373,7 +377,7 @@ public:
       {
         // for the spaceball, we have a problem-- axes can be very large and not particularly bounded (confusing).
         // this means we have to artificially bound and scale for safety reasons
-        short ax = orb.axis(pgm_read_byte(&axis_map[index])) >> ( index < 3 ? 2 : 0 );
+        short ax = orb.axis(pgm_read_byte(&axis_map[index])); // >> ( index < 3 ? 2 : 0 );
 	ax = bounded_number( ax, -512, 511 );
         return axis_with_gain( ax, (int)(pgm_read_word(&polarity[index])), this_gain, p_sensitivity_table );
       }
