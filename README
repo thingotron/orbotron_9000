@@ -34,3 +34,13 @@ upload custom sketches to the board.  This will require a bit more effort.
 You should then be able to start up the Arduino environment and try uploading
 an example such as "BasicJoystick" from the Orbotron library.  Don't forget
 to change your board type to "Orbotron 9000"!
+
+=========
+If you want to try Arduino 1.5.x (no guarantees :-)
+
+1. Install Arduino 1.5.2 (or the latest stable build)
+2. Copy the "hardware/orbotron" directory into your arduino/hardware/arduino
+   directory (so it should be arduino/hardware/arduino/orbotron).
+3. Copy the "libraries/orbotron" directory into your arduino libraries 
+   directory (so it should be arduino/libraries/orbotron).
+

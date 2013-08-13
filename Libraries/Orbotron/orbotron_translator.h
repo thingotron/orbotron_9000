@@ -352,16 +352,21 @@ public:
 
   unsigned short mapped_buttons( Logical_orbotron& orb ) 
   {
-    unsigned short result;
+    unsigned short result = orb.physical_buttons;
     // work chording here
     if ( chording )
     {
-      int chord_page = orb.physical_buttons & 3;
-      result = ( orb.physical_buttons >> 2 ) << ( 4*chord_page);
-    }
-    else
-    {
-      result = orb.physical_buttons;// & 63;
+      if (orb.orb_type == SpaceBall5000) {
+        int is_chording = (orb.physical_buttons & 0x800); // button 12 is the C button
+        if (is_chording) {
+          result = ((unsigned long) ( orb.physical_buttons )) << 11;
+          //BUG: for some reason, this calculation causes the sign bit to be set in the 16-bit result
+          // if you press button 5 so it translates this to button 15/16 simultaneously
+        }
+      } else {
+        int chord_page = orb.physical_buttons & 3;
+        result = ( orb.physical_buttons >> 2 ) << ( 4*chord_page);
+      }
     }
     return result;
   }

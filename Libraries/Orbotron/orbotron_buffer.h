@@ -321,9 +321,28 @@ public:
     {
       if ( crunch_magellan_nibbles() )
 	{
-	  physical_buttons = (buffer[1] << 1)
-	    | (buffer[2] << 5)
-	    | buffer[3];
+// this old code from the Linux magellan.c code makes sense
+//	  physical_buttons = (buffer[1] << 1)
+//	    | (buffer[2] << 5)
+//	    | buffer[3];
+// buttons 1-9 return:
+// 107 65 48 48 13
+// 107 66 48 48 13
+// 107 68 48 48 13
+// 107 72 48 48 13
+// 107 48 65 48 13
+// 107 48 66 48 13
+// 107 48 68 48 13
+// 107 48 72 48 13
+// 107 48 48 65 13
+// buttons A-C return:
+// 107 48 48 66 13
+// 107 48 48 68 13
+// 107 48 48 72 13
+// so this works better:
+	  physical_buttons = (buffer[1] & 0xf)
+	    | ((buffer[2] & 0xf) << 4)
+	    | ((buffer[3] & 0xf) << 8);
 	}
       
     }
